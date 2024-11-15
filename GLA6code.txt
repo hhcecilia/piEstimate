@@ -1,0 +1,26 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int terms;
+    double piEstimate = 0.0;
+
+    // asking user to input number of terms.
+    cout << "Enter the total number of terms: ";
+    cin >> terms;
+
+    // Loop formula
+    for (int i = 0; i < terms; ++i) {
+        piEstimate += (pow(-1, i) / (2 * i + 1));
+    }
+
+    double pi = piEstimate * 4;
+
+    
+    cout << fixed << setprecision(2);
+    // Display the result with two decimal place
+    cout << "The value of pi is: " << pi << endl;
+
+    return 0;
+}
